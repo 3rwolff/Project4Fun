@@ -1,9 +1,57 @@
+<!DOCTYPE html>
 <html>
-	<head>
+<head>
+<style>
+	body {
+		background-color: lightblue;
+		font-family: cursive;
+	}
+	#mainTitle {
+		text-align: center;
+	}
+	#topMenu {
+		font-size: 20pt;
+		border:solid;
+		width: 100px;
+		font-family: cursive;
+	}
+	.mainBodyOptions {
+		padding-bottom: 10px;
+		padding-left: auto;
+	}
+	.mainBodyOptions div {
+		display: inline;
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+	.mainBodyOptions {
+		width: 600px;
+	}
+	.mainBody2 {
+		border: solid;
+		background-color: lightgrey;
+		width: 600px;
+		padding: 20px;
+		font-family: cursive;
+		text-align: justify;
+  		text-justify: inter-word;
+	}
+</style>
 	<title>Project 4 Fun!</title>
-	</head>
-	<body>
-		This is my project!!
-		Test branch stuff.
-	</body>
+	<h1 id="mainTitle"><b><u>Build A Burger</u></b></h1>
+</head>
+<body>
+<div id="mainContainer" align="center">
+	<div class="mainBodyOptions">
+		<div id="topMenu" class="mainBodyMenu" border=2px>
+			<div class="sideMenuOption"><a href=#Burgers title="Choose a burger recipie.">Burgers</a></div>
+			<div class="sideMenuOption"><a href=#Burgers title="Choose a burger topping.">Toppings</a></div>
+			<div class="sideMenuOption"><a href=#Burgers title="Choose a burger sauce">Sauces</a></div>
+		</div>
+	</div>
+	<div id="centerContent" class="mainBody2" border=2px>
+		<div><p>This is a paragraph of infomation regarding the types of burgers you can design here. This is a paragraph of infomation regarding the types of burgers you can design here. This is a paragraph of infomation regarding the types of burgers you can design here.</p></div>
+	</div>
+</div>
+</body>
 </html>
