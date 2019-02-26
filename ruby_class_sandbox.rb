@@ -102,7 +102,7 @@ class SkaterHuman < Human
         i = 0
         gearAlreadyUsed = Array.new
         numGear = rand( 1 .. @gearArray.size )
-        
+       
         numGear.times do
             if (i == numGear - 1 && i != 0) 
                 gearString << " and" 
@@ -113,9 +113,11 @@ class SkaterHuman < Human
             #save what gear has already been used, we don't want the same piece to appear more than once
             foundGear = false
             while foundGear == false
-                tempGear = rand( @gearArray.size )
-                if !gearAlreadyUsed.include?( gearAlreadyUsed[ tempGear ] ) 
+                tempGear = rand( @gearArray.size - 1 )
+                if !gearAlreadyUsed.include?( tempGear ) 
                     foundGear = true 
+                else
+                    foundGear = false
                 end
             end
             
@@ -171,3 +173,9 @@ ricky.SpecialTalents
 
 
 
+
+    
+    
+
+    
+    
