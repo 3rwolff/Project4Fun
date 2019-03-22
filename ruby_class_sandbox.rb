@@ -4,11 +4,26 @@
 #
 ##############################################
 
+#########
+# MODULES
+#########
+#modules can not be instantiated. To include a modlue in the same directory 
+#but a different file use "require_relative "<module name>""
+module Read
+    #READ
+    def read
+        puts "I can read stuff!"
+    end
+end
+    
 #######
 # HUMAN
 #######
 class Human
-    
+    #include the module 'Read'. Use "Prepend" if you want any
+    #method in the module to supercede those in the class
+    include Read
+
     #INITIALIZER
     def initialize
        puts "Creating a new Human; object ID: #{self.object_id}." 
@@ -161,21 +176,14 @@ ricky.SpecialTalents
 
 
 
-
 ###################  JUNK CODE  #####################
 #ALTERNATE syntax for setting instance variables
+
+#something not working with setting with this syntax
 #SET_FirstName
     #def set_FirstName( newName )
     #    check_name( newName ) ? @FirstName = newName : abort( "Method 1: Bad input, can't set name to \"#{newName}\"." )
 #end
     
-
-
-
-
-
-    
-    
-
     
     

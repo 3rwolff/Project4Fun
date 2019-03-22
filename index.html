@@ -24,9 +24,6 @@
 		padding-left: 20px;
 		padding-right: 20px;
 	}
-	.mainBodyOptions {
-		width: 600px;
-	}
 	.mainBody2 {
 		border: solid;
 		background-color: lightgrey;
@@ -36,11 +33,23 @@
 		text-align: justify;
   		text-justify: inter-word;
 	}
+	.container {
+		cursor: pointer;
+	}
 </style>
 	<title>Project 4 Fun!</title>
 	<h1 id="mainTitle"><b><u>Build A Burger</u></b></h1>
 </head>
 <body>
+
+<script>
+	function showPara()
+        {
+            document.getElementById("first").style.visibility=(document.my_form.chk_box1.checked) ? "visible" : "hidden";
+        }
+</script>
+
+
 <div id="mainContainer" align="center">
 	<div class="mainBodyOptions">
 		<div id="topMenu" class="mainBodyMenu" border=2px>
@@ -52,6 +61,12 @@
 	<div id="centerContent" class="mainBody2" border=2px>
 		<div><p>This is a paragraph of infomation regarding the types of burgers you can design here. This is a paragraph of infomation regarding the types of burgers you can design here. This is a paragraph of infomation regarding the types of burgers you can design here.</p></div>
 	</div>
+
+	<form name="my_form">
+        <label class="container"><input type="checkbox" checked name="chk_box1" onClick="showPara();" />First</label>
+    </form>
+	<p id="first">This is the first paragraph</p>
+
 </div>
 </body>
 </html>
