@@ -1,0 +1,154 @@
+	/*THIS IS THE BASIC STRUCTURE CSS*/
+	body {
+		background-color: lightblue;
+		font-family: cursive;
+	}
+	#mainTitle {
+		text-align: center;
+	}
+	#topMenu {
+		font-size: 20pt;
+		border:solid;
+		width: auto;
+		font-family: cursive;
+	}
+	.mainBodyOptions {
+		padding-bottom: 10px;
+		padding-left: auto;
+	}
+	.mainBodyOptions div {
+		display: inline;
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+
+	#ultimateContainer {
+		width: 600px;
+		border: none;
+
+	}
+	.mainBody2 {
+		display: block;
+		position: relative;
+		border: solid;
+		background-color: lightgrey;
+		width: 100%;
+		padding: 0px;
+		font-family: cursive;
+		text-align: justify;
+  		text-justify: inter-word;
+	}
+	#centerContent p {
+		padding: 20px;
+	}
+	.mainBody3 {
+		border: solid;
+		background-color: lightgrey;
+		width: 100%;
+		padding: 0px;
+	}
+	#funFactContent form {
+		padding: 0px;
+	}
+
+
+	#selectToppingsContainer {
+		display: flex;
+		width: 100%;
+		border: solid blue;
+	}
+	
+	.mainBody4 {
+		display: inline-block;
+		position: relative;
+		width: 45%;
+		background-color: lightgrey;
+		padding: 20px 0px 20px 0px;
+		border: solid purple;
+	}
+	#right.mainBody4 {
+		border: solid green;
+		
+	}
+	
+
+	.container {
+		cursor: pointer;
+	}
+
+	.chk_txt {
+		position: relative;
+		padding-left: 0px;
+	}
+
+	.facts {
+		display: block;
+		visibility: visible;
+		font-size: 22px;
+	}
+
+/* THIS CODE BELOW CREATES A CUSTOM CHECKBOX THAT IS GREY/BLUE
+WITH A TWO SIDED BORDER CREATING THE CHECK. THE DEFAULT
+CHECKBOX WILL BE HIDDEN*/
+
+/* The container */
+.container {
+  display: block;
+  position: relative;
+  cursor: pointer;
+  font-size: 22px;
+  width: 25px;
+}
+
+/* Hide the browser's default checkbox */
+.container input {
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom square */
+.checkmark {
+  position: absolute;
+  right: 0px;
+  height: 25px;
+  width: 25px;
+  background-color: #aaa;
+}
+
+/* On mouse-over, add a blue background color */
+.container:hover input ~ .checkmark {
+  background-color: #2196F3;
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input:checked ~ .checkmark {
+  background-color: #aaa;
+}
+
+/* When the checkbox is checked, add a blue background */
+.container input:checked ~ .checkmark {
+  background-color: #2196F3;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: block;
+}
+
+/* Show the checkmark when checked */
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.container .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0px 3px 3px 0px; 
+  transform: rotate(45deg);
+}
