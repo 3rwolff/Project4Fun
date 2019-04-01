@@ -1,16 +1,41 @@
 	/*THIS IS THE BASIC STRUCTURE CSS*/
+	html {
+		scroll-behavior: smooth;	
+	}
 	body {
-		background-color: lightblue;
+		background-color: #333;
 		font-family: cursive;
+	}
+	#header {
+		display: flex;
+	}
+	.headerContent {
+		margin: auto;
+		padding: 0px 20px 0px 20px;
+	}
+	.img {
+		width: 15%;
+		height: auto;
 	}
 	#mainTitle {
-		text-align: center;
+		padding: 30px 0px 0px 0px;
+		color: red;
+		font-size: 40pt;
+		text-decoration: red overline underline;
 	}
 	#topMenu {
+		display: block;
+		width: 600px;
 		font-size: 20pt;
-		border:solid;
-		width: auto;
-		font-family: cursive;
+		color: darkgrey;
+		background-color: #888;
+		border:solid black;
+		font-family: sans-serif;
+		padding: 5px 0px 5px 0px;
+		
+	}
+	.mainLinks a {
+		color: #ddd;
 	}
 	.mainBodyOptions {
 		padding-bottom: 10px;
@@ -30,7 +55,7 @@
 	.mainBody2 {
 		display: block;
 		position: relative;
-		border: solid;
+		border: solid grey;
 		background-color: lightgrey;
 		width: 100%;
 		padding: 0px;
@@ -42,7 +67,7 @@
 		padding: 20px;
 	}
 	.mainBody3 {
-		border: solid;
+		border: solid grey;
 		background-color: lightgrey;
 		width: 100%;
 		padding: 0px;
@@ -55,7 +80,7 @@
 	#selectToppingsContainer {
 		display: flex;
 		width: 100%;
-		border: solid blue;
+		border: none;
 	}
 	
 	.mainBody4 {
@@ -64,13 +89,12 @@
 		width: 45%;
 		background-color: lightgrey;
 		padding: 20px 0px 20px 0px;
-		border: solid purple;
+		border: solid grey;
 	}
-	#right.mainBody4 {
-		border: solid green;
-		
+	.mainBody5 {
+		display: inline-block;
+		width: 10%;
 	}
-	
 
 	.container {
 		cursor: pointer;
@@ -85,6 +109,33 @@
 		display: block;
 		visibility: visible;
 		font-size: 22px;
+		color: red;
+	}
+
+	#base {
+		display: flex;
+	}
+	.baseContent {
+		margin: auto;
+		padding: 0px 20px 0px 20px;	
+	}
+	#scrollBtn {
+		 display: block;
+		 position: fixed;
+		 bottom: 20px;
+		 right: 30px;
+		 z-index: 99;
+		 font-size: 18px;
+		 border: none;
+		 outline: none;
+		 background-color: red;
+		 color: white;
+		 cursor: pointer;
+		 padding: 15px;
+		 border-radius: 4px;
+	}
+	#scrollBtn:hover {
+  		 background-color: #555;
 	}
 
 /* THIS CODE BELOW CREATES A CUSTOM CHECKBOX THAT IS GREY/BLUE
@@ -113,6 +164,7 @@ CHECKBOX WILL BE HIDDEN*/
   height: 25px;
   width: 25px;
   background-color: #aaa;
+  border-radius: 4px;
 }
 
 /* On mouse-over, add a blue background color */
