@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-<head>
+
 
 <!--The link tag must be out side of the <style> tags-->
 <link rel="stylesheet" href="index_stylesheet.css" />
@@ -8,17 +8,6 @@
 <style>
 	/*We are linking in all our css*/
 </style>
-
-<title>Build A Burger</title>
-
-<div id="header">
-	<img class="headerContent img" src="C:/Users/RWolff/Desktop/Project4Fun/assets/burger_img.png"/>
-	<div  class="headerContent" id="mainTitle">Build A Burger</div>
-	<img class="headerContent img" src="C:/Users/RWolff/Desktop/Project4Fun/assets/burger_img.png"/>
-</div>
-
-</head>
-<body>
 
 <script>
 
@@ -75,73 +64,60 @@
         
 </script>
 
+<head>
+<title>Build A Burger</title>
+
+<div id="header">
+	<img class="headerContent img" src="C:/Users/RWolff/Desktop/Project4Fun/assets/burger_img.png"/>
+	<img class="headerContent" src="C:/Users/RWolff/Desktop/Project4Fun/assets/title_txt_hot.png"/>
+	<img class="headerContent img" src="C:/Users/RWolff/Desktop/Project4Fun/assets/burger_img.png"/>
+</div>
+
+</head>
+
+<body>
 
 <div id="mainContainer" align="center">
-	<div class="mainBodyOptions">
-		<div id="topMenu">
-			<div class="mainLinks"><a href=#Burgers title="Choose a burger recipie.">Burgers</a></div>
-			<div class="mainLinks"><a href=#Burgers title="Choose a burger topping.">Build</a></div>
-			<div class="mainLinks"><a href=#Burgers title="Choose a burger sauce">About Us</a></div>
-		</div>
-	</div>
+	
 	<div id="ultimateContainer">
-		<div id="centerContent" class="mainBody2">
-			<div><p>This is a paragraph of infomation regarding the types of burgers you can design here. This is a paragraph of infomation regarding the types of burgers you can design here. This is a paragraph of infomation regarding the types of burgers you can design here.</p></div>
+		<div id="topMenu">
+			<div class="menuLinks round shadow" title="Select burger recipies.">Burgers</div>
+			<div class="menuLinks round shadow" title="Build a custom burger!">Build</div>
+			<div class="menuLinks round shadow" title="Learn more about us.">About Us</div>
 		</div><br>
 
-		<div id="funFactContent" class="mainBody3">
+		<div id="hotSpecial" class="mainBody2 round">
+			<div>HOT SPECIAL</div>
+		</div><br>
+
+		<div id="funFactContent" class="mainBody3 round shadow">
 			<form name="my_form">
 				<span class="chk_txt">Click to show a fun burger fact!</span>
-		        <label class="container"><input type="checkbox" name="chk_box1" onClick="showPara();" /><span id="chk_cust1" class="checkmark"/></label>
+		        <label class="container"><input type="checkbox" name="chk_box1" onClick="showPara();" /><span id="chk_cust1" class="checkmark round"/></label>
 		    </form>
 			<span class="facts" id="randomFact"></span>
 		</div> <br>
 
 		<div id="selectToppingsContainer">
-			<div id="left" class="mainBody4">
+			<div class="mainBody4 round shadow">
 				<div><b><u>Toppings</u></b></div>
 				<div>Havarti</div>
 			</div>
 
-			<div id="center" class="mainBody5"></div>
+			<div class="mainBody5"></div>
 
-			<div id="right" class="mainBody4">
+			<div class="mainBody4 round shadow">
 				<div><b><u>Sauces</u></b></div>
 				<div>Ketchup</div>
 			</div>
 		</div>
 
-		<div id="selectToppingsContainer">
-			<div id="left" class="mainBody4">
-				<div><b><u>Toppings</u></b></div>
-				<div>Havarti</div>
-			</div>
-
-			<div id="center" class="mainBody5"></div>
-
-			<div id="right" class="mainBody4">
-				<div><b><u>Sauces</u></b></div>
-				<div>Ketchup</div>
-			</div>
-		</div>
-		<div id="selectToppingsContainer">
-			<div id="left" class="mainBody4">
-				<div><b><u>Toppings</u></b></div>
-				<div>Havarti</div>
-			</div>
-
-			<div id="center" class="mainBody5"></div>
-
-			<div id="right" class="mainBody4">
-				<div><b><u>Sauces</u></b></div>
-				<div>Ketchup</div>
-			</div>
-		</div>
+		
 
 	</div>
 </div><!--end mainContaier-->
 <div id="base">
-	<button class="baseContent" id="scrollBtn" onClick="scrollMeToTop();">Scroll To Top</button>
+	<button class="baseContent round" id="scrollBtn" onClick="scrollMeToTop();">Scroll To Top</button>
 	<img class="baseContent" src="C:/Users/RWolff/Desktop/Project4Fun/assets/giphy_burger.gif"/>
 </div>
 </body>
@@ -149,7 +125,5 @@
 <script>
 	//THIS SCRIPT RUNS AFTER THE HTML HAS BEEN ESTABLISHED
 
-	//this appears after the html for the button has been created or it won't exist
-	document.getElementById("scrollBtn").style.display = "none";
 </script>
 </html>

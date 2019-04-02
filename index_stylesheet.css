@@ -11,51 +11,51 @@
 	}
 	.headerContent {
 		margin: auto;
-		padding: 0px 20px 0px 20px;
+		padding: 0px 0px 0px 0px;
 	}
 	.img {
 		width: 15%;
 		height: auto;
 	}
-	#mainTitle {
-		padding: 30px 0px 0px 0px;
-		color: red;
-		font-size: 40pt;
-		text-decoration: red overline underline;
-	}
+	
 	#topMenu {
-		display: block;
+		display: ;
 		width: 600px;
 		font-size: 20pt;
-		color: darkgrey;
-		background-color: #888;
-		border:solid black;
+		color: white;
+		background-color: none;
+		border: none;
 		font-family: sans-serif;
-		padding: 5px 0px 5px 0px;
-		
+		padding: 0px 0px 0px 0px;
 	}
-	.mainLinks a {
-		color: #ddd;
+	.menuLinks {
+		display: inline-block;
+		position: relative;
+		width: 32%;
+		background-color: red;
+		padding: 0px 0px 0px 0px;
+		border: none;
 	}
+	.menuLinks:hover {
+		background-color: #555;
+	}
+	
 	.mainBodyOptions {
 		padding-bottom: 10px;
 		padding-left: auto;
 	}
-	.mainBodyOptions div {
-		display: inline;
-		padding-left: 20px;
-		padding-right: 20px;
-	}
+	
 
 	#ultimateContainer {
 		width: 600px;
 		border: none;
+		outline: none;
 
 	}
 	.mainBody2 {
 		display: block;
 		position: relative;
-		border: solid grey;
+		border: none;
 		background-color: lightgrey;
 		width: 100%;
 		padding: 0px;
@@ -63,17 +63,38 @@
 		text-align: justify;
   		text-justify: inter-word;
 	}
-	#centerContent p {
+
+	#hotSpecial {
 		padding: 20px;
+		box-shadow: 5px 10px 10px 0px red;
+		animation: myShadow 4s infinite;
 	}
-	.mainBody3 {
-		border: solid grey;
-		background-color: lightgrey;
-		width: 100%;
-		padding: 0px;
+	#hotSpecial:hover {
+		animation: myBackground 4s infinite;
 	}
-	#funFactContent form {
-		padding: 0px;
+	
+	@keyframes myShadow {
+		/* this at-rule is named 'mymove' and describes one cycle of the animation*/
+  		40% {box-shadow: 5px 10px 10px 0px darkred;}
+  		50% {box-shadow: 5px 10px 10px 0px coral;}
+	}
+	@keyframes myBackground {
+		/* this at-rule is named 'mymove' and describes one cycle of the animation*/
+  		40% {background: darkred;}
+  		50% {background: red;}
+  		90% {background: coral;}
+	}
+
+    .mainBody3 {         
+    	border: none;
+    	background-color: lightgrey;         
+    	width: 100%;         
+    	padding: 0px;     
+    }
+	#funFactContent form {         
+		padding: 10px 0px 10px 0px;
+		background-image:
+		url('C:/Users/RWolff/Desktop/Project4Fun/assets/vertical_wood.png');
 	}
 
 
@@ -87,9 +108,9 @@
 		display: inline-block;
 		position: relative;
 		width: 45%;
-		background-color: lightgrey;
+		background-image: url('C:/Users/RWolff/Desktop/Project4Fun/assets/horizontal_wood.png');
 		padding: 20px 0px 20px 0px;
-		border: solid grey;
+		border: none;
 	}
 	.mainBody5 {
 		display: inline-block;
@@ -120,7 +141,7 @@
 		padding: 0px 20px 0px 20px;	
 	}
 	#scrollBtn {
-		 display: block;
+		 display: none;
 		 position: fixed;
 		 bottom: 20px;
 		 right: 30px;
@@ -132,11 +153,19 @@
 		 color: white;
 		 cursor: pointer;
 		 padding: 15px;
-		 border-radius: 4px;
 	}
 	#scrollBtn:hover {
   		 background-color: #555;
 	}
+
+/*HELPER CSS CLASSES*/
+.round {
+	border-radius: 4px;
+}
+
+.shadow {
+	box-shadow: 2px 5px 10px 0px black;
+}
 
 /* THIS CODE BELOW CREATES A CUSTOM CHECKBOX THAT IS GREY/BLUE
 WITH A TWO SIDED BORDER CREATING THE CHECK. THE DEFAULT
@@ -164,7 +193,6 @@ CHECKBOX WILL BE HIDDEN*/
   height: 25px;
   width: 25px;
   background-color: #aaa;
-  border-radius: 4px;
 }
 
 /* On mouse-over, add a blue background color */
