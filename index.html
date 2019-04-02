@@ -6,73 +6,26 @@
 <link rel="stylesheet" href="index_stylesheet.css" />
 
 <style>
-	/*We are linking in all our css*/
+	/*CSS file linked in*/
 </style>
 
-<script>
-
-	 window.onscroll = function() {hideScrollBtn()};
-
-	function showPara()
-        {
-        //shows fun burger facts
-       	if ( document.getElementById( "randomFact").innerHTML==""){
-       	
-       		var rand_num = Math.floor( Math.random() * 4 );
-	     		
-	     	//only create new random number if it is the same as the last time	
-	     	if ( typeof temp == 'number' ){
-	     		while ( rand_num == temp ){
-					var rand_num = Math.floor(Math.random()*4);
-	       			}
-	     		}
-
-            temp = rand_num;//save previous fact, no duplicates
-	        var facts = Array();
-	        facts[0] = "7 calories in a gram of burger fat!";
-	        facts[1] = "Bacon bits make any burger better!";
-	        facts[2] = "Burger Meister Burger Meister!";
-	        facts[3] = "Some burgers aren't made of beef!";
-	           document.getElementById( "randomFact" ).innerHTML = facts[rand_num];
-	        }
-	    else{
-	    	document.getElementById( "randomFact" ).innerHTML="";
-	    	}
-        }//end showPara()
-
-    function scrollMeToTop()
-    	{
-    	//scrolls to top of page
-       	
-       	document.documentElement.scrollTop = 0;//window.scrollTo(0,0);//also works
-       	document.body.scrollTop = 0;
-    	}//end scrollMeToTop()
-
-    function hideScrollBtn()
-    	{
-    	//hide scroll button when at top of document
-    	if (document.documentElement.scrollTop > 20 || document.body.scrollTop > 20){
-    		document.getElementById("scrollBtn").style.display="block";
-    		console.log("disp block");
-    	}
-    	else
-    	{
-    		document.getElementById("scrollBtn").style.display="none";
-    		console.log("disp none");
-    	}
-    	}//end hideScrollBtn()
-        
+<script type="text/javascript" src="app.js">
+	//JS file linked in
 </script>
 
 <head>
-<title>Build A Burger</title>
+	 
+	<title>Build A Burger</title>
+	<!--the favicon must be in home directory to work-->
+	<link rel="icon" type="image/png" sizes="32x32" href="C:/Users/RWolff/Desktop/Project4Fun/favicon.png">
 
-<div id="header">
-	<img class="headerContent img" src="C:/Users/RWolff/Desktop/Project4Fun/assets/burger_img.png"/>
-	<img class="headerContent" src="C:/Users/RWolff/Desktop/Project4Fun/assets/title_txt_hot.png"/>
-	<img class="headerContent img" src="C:/Users/RWolff/Desktop/Project4Fun/assets/burger_img.png"/>
-</div>
+	<div id="header">
+		<img class="headerContent img" src="C:/Users/RWolff/Desktop/Project4Fun/assets/burger_img.png"/>
+		<img class="headerContent" src="C:/Users/RWolff/Desktop/Project4Fun/assets/title_txt_hot.png"/>
+		<img class="headerContent img" src="C:/Users/RWolff/Desktop/Project4Fun/assets/burger_img.png"/>
+	</div>
 
+	<noscript>Looks like your browser does not have JavaScript!</noscript>
 </head>
 
 <body>
@@ -86,13 +39,16 @@
 			<div class="menuLinks round shadow" title="Learn more about us.">About Us</div>
 		</div><br>
 
-		<div id="hotSpecial" class="mainBody2 round">
-			<div>HOT SPECIAL</div>
-		</div><br>
+		<a onClick="showGrill()"><div id="hotSpecial" class="round">
+			<div id="specialTitle">
+				&#10067 &nbsp;&nbsp; W H A T ' S &nbsp;&nbsp; O N &nbsp;&nbsp; T H E &nbsp;&nbsp; G R I L L &nbsp;&nbsp; &#10067
+				<span id="grillContent"></span>
+			</div>
+		</div></a><br>
 
 		<div id="funFactContent" class="mainBody3 round shadow">
 			<form name="my_form">
-				<span class="chk_txt">Click to show a fun burger fact!</span>
+				<div class="chk_txt">Click to show a fun burger fact!</div>
 		        <label class="container"><input type="checkbox" name="chk_box1" onClick="showPara();" /><span id="chk_cust1" class="checkmark round"/></label>
 		    </form>
 			<span class="facts" id="randomFact"></span>

@@ -65,24 +65,32 @@
 	}
 
 	#hotSpecial {
-		padding: 20px;
+		background-color: black;
+		padding: 20px 0px 20px 0px;
 		box-shadow: 5px 10px 10px 0px red;
+		color: white;
 		animation: myShadow 4s infinite;
 	}
 	#hotSpecial:hover {
+		background-color: #ff9900;
 		animation: myBackground 4s infinite;
 	}
-	
 	@keyframes myShadow {
 		/* this at-rule is named 'mymove' and describes one cycle of the animation*/
-  		40% {box-shadow: 5px 10px 10px 0px darkred;}
-  		50% {box-shadow: 5px 10px 10px 0px coral;}
+  		60% {box-shadow: 5px 10px 10px 0px darkred;}
+  		80% {box-shadow: 5px 10px 10px 0px coral;}
 	}
 	@keyframes myBackground {
 		/* this at-rule is named 'mymove' and describes one cycle of the animation*/
-  		40% {background: darkred;}
-  		50% {background: red;}
+  		40% {background: #ff6666;}
+  		50% {background: #ff4444;}
   		90% {background: coral;}
+	}
+	
+
+	#specialTitle {
+		display: block;
+		text-align: center;
 	}
 
     .mainBody3 {         
@@ -91,12 +99,19 @@
     	width: 100%;         
     	padding: 0px;     
     }
-	#funFactContent form {         
+	#funFactContent form {      
+		font-size: 18pt;   
 		padding: 10px 0px 10px 0px;
 		background-image:
 		url('C:/Users/RWolff/Desktop/Project4Fun/assets/vertical_wood.png');
 	}
+	.facts {
+		display: block;
+		visibility: visible;
+		font-size: 18pt;
+		color: red;
 
+	}
 
 	#selectToppingsContainer {
 		display: flex;
@@ -124,13 +139,6 @@
 	.chk_txt {
 		position: relative;
 		padding-left: 0px;
-	}
-
-	.facts {
-		display: block;
-		visibility: visible;
-		font-size: 22px;
-		color: red;
 	}
 
 	#base {
@@ -192,22 +200,22 @@ CHECKBOX WILL BE HIDDEN*/
   right: 0px;
   height: 25px;
   width: 25px;
-  background-color: #aaa;
+  background-color: #555;
 }
 
 /* On mouse-over, add a blue background color */
 .container:hover input ~ .checkmark {
-  background-color: #2196F3;
+  background-color: red;
 }
 
 /* On mouse-over, add a grey background color */
 .container:hover input:checked ~ .checkmark {
-  background-color: #aaa;
+  background-color: #555;
 }
 
 /* When the checkbox is checked, add a blue background */
 .container input:checked ~ .checkmark {
-  background-color: #2196F3;
+  background-color: red;
 }
 
 /* Create the checkmark/indicator (hidden when not checked) */
