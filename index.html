@@ -3,7 +3,7 @@
 
 
 <!--The link tag must be out side of the <style> tags-->
-<link rel="stylesheet" href="index_stylesheet.css" />
+<link rel="stylesheet" href="stylesheet.css" />
 
 <style>
 	/*CSS file linked in*/
@@ -47,28 +47,37 @@
 		</div></a><br>
 
 		<div id="funFactContent" class="mainBody3 round shadow">
-			<form name="my_form">
-				<div class="chk_txt">Click to show a fun burger fact!</div>
-		        <label class="container"><input type="checkbox" name="chk_box1" onClick="showPara();" /><span id="chk_cust1" class="checkmark round"/></label>
+			<form name="my_form" class="round">
+				<div id="factContainer" class="chk_txt">Click to show a fun burger fact!
+		        	<label class="container">
+		        		<input type="checkbox" name="chk_box1" onClick="showFact();" />
+		        		<span id="chk_cust1" class="checkmark round"/>
+		        	</label>
+		    	</div>
 		    </form>
-			<span class="facts" id="randomFact"></span>
 		</div> <br>
 
-		<div id="selectToppingsContainer">
-			<div class="mainBody4 round shadow">
-				<div><b><u>Toppings</u></b></div>
-				<div>Havarti</div>
+		<div id="condimentsContainer">
+			<div class="condimentsTitle round shadow">
+				<div>
+					<b><u>Toppings</u></b>
+				</div>
+
+				<div class="tooltip">
+					Havarti
+					<span class="tooltiptext">
+						1 Slice &#9679 105 cal &#9679 $0.50
+					</span>
+				</div>
 			</div>
 
 			<div class="mainBody5"></div>
 
-			<div class="mainBody4 round shadow">
+			<div class="condimentsTitle round shadow">
 				<div><b><u>Sauces</u></b></div>
 				<div>Ketchup</div>
 			</div>
 		</div>
-
-		
 
 	</div>
 </div><!--end mainContaier-->

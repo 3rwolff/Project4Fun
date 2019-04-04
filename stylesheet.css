@@ -22,6 +22,7 @@
 		display: ;
 		width: 600px;
 		font-size: 20pt;
+		font-variant: small-caps;
 		color: white;
 		background-color: none;
 		border: none;
@@ -101,31 +102,45 @@
     }
 	#funFactContent form {      
 		font-size: 18pt;   
+		font-variant: small-caps;
 		padding: 10px 0px 10px 0px;
 		background-image:
 		url('C:/Users/RWolff/Desktop/Project4Fun/assets/vertical_wood.png');
 	}
-	.facts {
+	#funFact {
 		display: block;
 		visibility: visible;
 		font-size: 18pt;
+		font-variant: small-caps;
+		font-weight: bold;
 		color: red;
-
+		animation: fadetext 3s infinite;
+	}
+	@keyframes fadetext {
+		0% {opacity: 1;}
+		60% {opacity: 0;}
+		0% {opacity: 1;}
 	}
 
-	#selectToppingsContainer {
+	#condimentsContainer {
 		display: flex;
 		width: 100%;
 		border: none;
 	}
-	
-	.mainBody4 {
+	.condimentsTitle {
 		display: inline-block;
 		position: relative;
 		width: 45%;
 		background-image: url('C:/Users/RWolff/Desktop/Project4Fun/assets/horizontal_wood.png');
 		padding: 20px 0px 20px 0px;
 		border: none;
+		font-size: 16pt;
+		font-variant: small-caps;
+	}
+	
+	
+	.mainBody4:hover {
+		color: red;
 	}
 	.mainBody5 {
 		display: inline-block;
@@ -154,7 +169,7 @@
 		 bottom: 20px;
 		 right: 30px;
 		 z-index: 99;
-		 font-size: 18px;
+		 font-size: 18pt;
 		 border: none;
 		 outline: none;
 		 background-color: red;
@@ -175,10 +190,11 @@
 	box-shadow: 2px 5px 10px 0px black;
 }
 
-/* THIS CODE BELOW CREATES A CUSTOM CHECKBOX THAT IS GREY/BLUE
+/******************************************************
+THIS CODE BELOW CREATES A CUSTOM CHECKBOX THAT IS GREY/BLUE
 WITH A TWO SIDED BORDER CREATING THE CHECK. THE DEFAULT
-CHECKBOX WILL BE HIDDEN*/
-
+CHECKBOX WILL BE HIDDEN
+********************************************************/
 /* The container */
 .container {
   display: block;
@@ -239,4 +255,48 @@ CHECKBOX WILL BE HIDDEN*/
   border: solid white;
   border-width: 0px 3px 3px 0px; 
   transform: rotate(45deg);
+}
+
+/******************************************************
+THIS CODE BELOW CREATES A CUSTOM HOVERABLE TOOLTIP
+********************************************************/
+/*this class is for the element to be tooltipped*/
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+/*the "tooltiptext" subclass is for the tooltip itsself*/
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 300px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  box-shadow: 5px 10px 10px 0px black;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  top: 125%;
+  left: -50%;
+  margin-left: -60px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent #555 transparent;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
 }
