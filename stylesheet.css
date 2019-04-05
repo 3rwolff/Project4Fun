@@ -117,9 +117,9 @@
 		animation: fadetext 3s infinite;
 	}
 	@keyframes fadetext {
-		0% {opacity: 1;}
-		60% {opacity: 0;}
-		0% {opacity: 1;}
+		20% {opacity: 1;}
+		80% {opacity: 0;}
+		82% {opacity: 1;}
 	}
 
 	#condimentsContainer {
@@ -130,21 +130,31 @@
 	.condimentsTitle {
 		display: inline-block;
 		position: relative;
-		width: 45%;
+		width: 46%;
 		background-image: url('C:/Users/RWolff/Desktop/Project4Fun/assets/horizontal_wood.png');
-		padding: 20px 0px 20px 0px;
+		padding: 25px 0px 20px 0px;
 		border: none;
-		font-size: 16pt;
+		font-size: 18pt;
 		font-variant: small-caps;
+		font-weight: bold;
+		text-decoration: underline;
 	}
-	
+	.options {
+
+		font-size: 16pt;
+		font-weight: normal;
+		padding: 10px 0px 0px 0px;
+	}
+	.options:hover {
+		font-weight: bold;
+	}
 	
 	.mainBody4:hover {
 		color: red;
 	}
 	.mainBody5 {
 		display: inline-block;
-		width: 10%;
+		width: 8%;
 	}
 
 	.container {
@@ -261,42 +271,37 @@ CHECKBOX WILL BE HIDDEN
 THIS CODE BELOW CREATES A CUSTOM HOVERABLE TOOLTIP
 ********************************************************/
 /*this class is for the element to be tooltipped*/
-.tooltip {
+
+[tooltip]{
+  margin:20px;
   position: relative;
-  display: inline-block;
+
+}
+[tooltip]::before {
+    content: "";
+    position: absolute;
+    top:-6px;
+    left:50%;
+    transform: translateX(-50%);
+    border-width: 4px 6px 0 6px;
+    border-style: solid;
+    border-color: rgba(0,0,0,0.7) transparent transparent     transparent;
+    z-index: 100;
+    
 }
 
-/*the "tooltiptext" subclass is for the tooltip itsself*/
-.tooltip .tooltiptext {
-  visibility: hidden;
-  width: 300px;
-  background-color: #555;
-  color: #fff;
-  text-align: center;
-  border-radius: 6px;
-  box-shadow: 5px 10px 10px 0px black;
-  padding: 5px 0;
-  position: absolute;
-  z-index: 1;
-  top: 125%;
-  left: -50%;
-  margin-left: -60px;
-  opacity: 0;
-  transition: opacity 0.3s;
-}
-
-.tooltip .tooltiptext::after {
-  content: "";
-  position: absolute;
-  bottom: 100%;
-  left: 50%;
-  margin-left: -5px;
-  border-width: 5px;
-  border-style: solid;
-  border-color: transparent transparent #555 transparent;
-}
-
-.tooltip:hover .tooltiptext {
-  visibility: visible;
-  opacity: 1;
+[tooltip]::after {
+    content: attr(tooltip);
+    position: absolute;
+    left:50%;
+    top:-6px;
+    transform: translateX(-50%)   translateY(-100%);
+    background: rgba(0,0,0,0.7);
+    text-align: center;
+    color: #fff;
+    padding:4px 2px;
+    font-size: 12px;
+    min-width: 80px;
+    border-radius: 5px;
+    pointer-events: none;
 }
