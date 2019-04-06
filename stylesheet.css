@@ -1,195 +1,250 @@
-	/*THIS IS THE BASIC STRUCTURE CSS*/
-	html {
-		scroll-behavior: smooth;	
-	}
-	body {
-		background-color: #333;
-		font-family: cursive;
-	}
-	#header {
-		display: flex;
-	}
-	.headerContent {
-		margin: auto;
-		padding: 0px 0px 0px 0px;
-	}
-	.img {
-		width: 15%;
-		height: auto;
-	}
-	
-	#topMenu {
-		display: ;
-		width: 600px;
-		font-size: 20pt;
-		font-variant: small-caps;
-		color: white;
-		background-color: none;
-		border: none;
-		font-family: sans-serif;
-		padding: 0px 0px 0px 0px;
-	}
-	.menuLinks {
-		display: inline-block;
-		position: relative;
-		width: 32%;
-		background-color: red;
-		padding: 0px 0px 0px 0px;
-		border: none;
-	}
-	.menuLinks:hover {
-		background-color: #555;
-	}
-	
-	.mainBodyOptions {
-		padding-bottom: 10px;
-		padding-left: auto;
-	}
-	
+/*THIS IS THE BASIC STRUCTURE CSS*/
+html {
+	scroll-behavior: smooth;	
+}
+body {
+	background-color: #333;
+	font-family: cursive;
+}
+#header {
+	display: flex;
+}
+.headerContent {
+	margin: auto;
+	padding: 0px 0px 0px 0px;
+}
+.img {
+	width: 15%;
+	height: auto;
+}
 
-	#ultimateContainer {
-		width: 600px;
-		border: none;
-		outline: none;
+#topMenu {
+	display: ;
+	width: 600px;
+	font-size: 20pt;
+	font-variant: small-caps;
+	color: white;
+	background-color: none;
+	border: none;
+	font-family: sans-serif;
+	padding: 0px 0px 0px 0px;
+}
+.menuLinks {
+	display: inline-block;
+	position: relative;
+	width: 32%;
+	background-color: red;
+	padding: 0px 0px 0px 0px;
+	border: none;
+}
+.menuLinks:hover {
+	background-color: #555;
+}
 
-	}
-	.mainBody2 {
-		display: block;
-		position: relative;
-		border: none;
-		background-color: lightgrey;
-		width: 100%;
-		padding: 0px;
-		font-family: cursive;
-		text-align: justify;
-  		text-justify: inter-word;
-	}
+.mainBodyOptions {
+	padding-bottom: 10px;
+	padding-left: auto;
+}
 
-	#hotSpecial {
-		background-color: black;
-		padding: 20px 0px 20px 0px;
-		box-shadow: 5px 10px 10px 0px red;
-		color: white;
-		animation: myShadow 4s infinite;
-	}
-	#hotSpecial:hover {
-		background-color: #ff9900;
-		animation: myBackground 4s infinite;
-	}
-	@keyframes myShadow {
-		/* this at-rule is named 'mymove' and describes one cycle of the animation*/
-  		60% {box-shadow: 5px 10px 10px 0px darkred;}
-  		80% {box-shadow: 5px 10px 10px 0px coral;}
-	}
-	@keyframes myBackground {
-		/* this at-rule is named 'mymove' and describes one cycle of the animation*/
-  		40% {background: #ff6666;}
-  		50% {background: #ff4444;}
-  		90% {background: coral;}
-	}
-	
 
-	#specialTitle {
-		display: block;
-		text-align: center;
-	}
+#ultimateContainer {
+	width: 600px;
+	border: none;
+	outline: none;
 
-    .mainBody3 {         
-    	border: none;
-    	background-color: lightgrey;         
-    	width: 100%;         
-    	padding: 0px;     
-    }
-	#funFactContent form {      
-		font-size: 18pt;   
-		font-variant: small-caps;
-		padding: 10px 0px 10px 0px;
-		background-image:
-		url('C:/Users/RWolff/Desktop/Project4Fun/assets/vertical_wood.png');
-	}
-	#funFact {
-		display: block;
-		visibility: visible;
-		font-size: 18pt;
-		font-variant: small-caps;
-		font-weight: bold;
-		color: red;
-		animation: fadetext 3s infinite;
-	}
-	@keyframes fadetext {
-		20% {opacity: 1;}
-		80% {opacity: 0;}
-		82% {opacity: 1;}
-	}
+}
+.mainBody2 {
+	display: block;
+	position: relative;
+	border: none;
+	background-color: lightgrey;
+	width: 100%;
+	padding: 0px;
+	font-family: cursive;
+	text-align: justify;
+		text-justify: inter-word;
+}
 
-	#condimentsContainer {
-		display: flex;
-		width: 100%;
-		border: none;
-	}
-	.condimentsTitle {
-		display: inline-block;
-		position: relative;
-		width: 46%;
-		background-image: url('C:/Users/RWolff/Desktop/Project4Fun/assets/horizontal_wood.png');
-		padding: 25px 0px 20px 0px;
-		border: none;
-		font-size: 18pt;
-		font-variant: small-caps;
-		font-weight: bold;
-		text-decoration: underline;
-	}
-	.options {
+#hotSpecial {
+	display: block;
+	background-color: black;
+	padding: 6px 0px 20px 0px;
+	box-shadow: 5px 10px 10px 0px red;
+	color: white;
+	border-top-left-radius: 15px;
+	border-top-right-radius: 15px;
+	animation: myShadow 4s infinite;
+}
+#hotSpecial:hover {
+	background-color: #ff9900;
+	animation: myBackground 4s infinite;
+}
+@keyframes myShadow {
+	/* this at-rule is named 'mymove' and describes one cycle of the animation*/
+		60% {box-shadow: 5px 10px 10px 0px darkred;}
+		80% {box-shadow: 5px 10px 10px 0px coral;}
+}
+@keyframes myBackground {
+	/* this at-rule is named 'mymove' and describes one cycle of the animation*/
+		40% {background: #ff6666;}
+		50% {background: #ff4444;}
+		90% {background: coral;}
+}
+hr {
+	height: 3px;
+	background-color: #333;
+	border: none;
+	padding: 0px 0px 0px 0px;
+	font-size: 8pt;
+}
 
-		font-size: 16pt;
-		font-weight: normal;
-		padding: 10px 0px 0px 0px;
-	}
-	.options:hover {
-		font-weight: bold;
-	}
-	
-	.mainBody4:hover {
-		color: red;
-	}
-	.mainBody5 {
-		display: inline-block;
-		width: 8%;
-	}
+#theGrill {
+	width: 96%;
+	height: 50px;
+	margin: auto;
+	border: solid #555 5px;
+	border-radius: 10px;
+    background: repeating-linear-gradient(
+            to right,
+            #ff6666,
+            coral 10px,
+            #666 2px,
+            black 20px
+            );
+}
+.grillGrate {
+  color: black;
+  animation: grillAnimation 2s infinite;
+  transition-timing-function: ease-in-out;
+}
+@keyframes grillAnimation {
+  /* this at-rule is named 'mymove' and describes one cycle of the animation*/
+    33% {background: repeating-linear-gradient(
+            to right,
+            #ff6666,
+            coral 10px,
+            #666 2px,
+            black 20px
+  );
+  }
+    34% {background: repeating-linear-gradient(
+            to right,
+            #ff4444,
+            #ff6666 10px,
+            #666 2px,
+            black 20px
+  );
+  }
+    33% {background: repeating-linear-gradient(
+            to right,
+            #ff4444,
+            orange 10px,
+            #666 2px,
+            black 20px
+  );
+  }
+}
+#specialTitle {
+	display: block;
+	text-align: center;
+}
 
-	.container {
-		cursor: pointer;
-	}
+.mainBody3 {         
+	border: none;
+	background-color: lightgrey;         
+	width: 100%;         
+	padding: 0px;     
+}
+#funFactContent form {      
+	font-size: 18pt;   
+	font-variant: small-caps;
+	padding: 10px 0px 10px 0px;
+	background-image:
+	url('C:/Users/RWolff/Desktop/Project4Fun/assets/vertical_wood.png');
+}
+#funFact {
+	display: block;
+	visibility: visible;
+	font-size: 18pt;
+	font-variant: small-caps;
+	font-weight: bold;
+	color: red;
+	animation: fadetext 3s infinite;
+}
+@keyframes fadetext {
+	20% {opacity: 1;}
+	80% {opacity: 0;}
+	82% {opacity: 1;}
+}
 
-	.chk_txt {
-		position: relative;
-		padding-left: 0px;
-	}
+#condimentsContainer {
+	display: flex;
+	width: 100%;
+	border: none;
+}
+.condimentsTitle {
+	display: block;
+	position: relative;
+	width: 46%;
+	background-image: url('C:/Users/RWolff/Desktop/Project4Fun/assets/horizontal_wood.png');
+	padding: 25px 0px 20px 0px;
+	border: none;
+	font-size: 18pt;
+	font-variant: small-caps;
+	font-weight: bold;
+	text-decoration: underline;
+}
+.condimentsGroup {
+	padding: 10px 0px 0px 0px;
+}
+.condimentsOptions {
+	display: block;
+	font-size: 14pt;
+	font-weight: normal;
+	padding: 2px 0px 2px 0px;
+}
+.condimentsOptions:hover {
+	font-weight: bold;
+}
 
-	#base {
-		display: flex;
-	}
-	.baseContent {
-		margin: auto;
-		padding: 0px 20px 0px 20px;	
-	}
-	#scrollBtn {
-		 display: none;
-		 position: fixed;
-		 bottom: 20px;
-		 right: 30px;
-		 z-index: 99;
-		 font-size: 18pt;
-		 border: none;
-		 outline: none;
-		 background-color: red;
-		 color: white;
-		 cursor: pointer;
-		 padding: 15px;
-	}
-	#scrollBtn:hover {
-  		 background-color: #555;
-	}
+#condimentsSpace {
+	display: inline-block;
+	width: 8%;
+}
+
+.container {
+	cursor: pointer;
+}
+
+.chk_txt {
+	position: relative;
+	padding-left: 0px;
+}
+
+#base {
+	display: flex;
+}
+.baseContent {
+	margin: auto;
+	padding: 0px 20px 0px 20px;	
+}
+#scrollBtn {
+	 display: none;
+	 position: fixed;
+	 bottom: 20px;
+	 right: 30px;
+	 z-index: 99;
+	 font-size: 14pt;
+	 border: none;
+	 outline: none;
+	 background-color: red;
+	 color: white;
+	 cursor: pointer;
+	 padding: 10px;
+}
+#scrollBtn:hover {
+		 background-color: #555;
+}
 
 /*HELPER CSS CLASSES*/
 .round {
@@ -273,35 +328,98 @@ THIS CODE BELOW CREATES A CUSTOM HOVERABLE TOOLTIP
 /*this class is for the element to be tooltipped*/
 
 [tooltip]{
-  margin:20px;
   position: relative;
-
+  display: inline-block;
 }
-[tooltip]::before {
+/*the BEFORE makes the arrow*/
+[tooltip]::after {
     content: "";
     position: absolute;
-    top:-6px;
-    left:50%;
-    transform: translateX(-50%);
-    border-width: 4px 6px 0 6px;
+    top: -6px;
+    left: 50%;
+    transform: translate(-50%, 0%);/*center the triange about it's center i.e. 50% ?*/
+    border-width: 15px 10px 0px 10px;
     border-style: solid;
-    border-color: rgba(0,0,0,0.7) transparent transparent     transparent;
-    z-index: 100;
-    
+    border-color: #555 transparent transparent transparent;
+    z-index: 1;
+    opacity: 0;
 }
 
-[tooltip]::after {
-    content: attr(tooltip);
+/*the AFTER part makes the main tooltip body*/
+[tooltip]::before {
+    content: attr(tooltip);/*fetch the text from the attribute*/
     position: absolute;
-    left:50%;
-    top:-6px;
-    transform: translateX(-50%)   translateY(-100%);
-    background: rgba(0,0,0,0.7);
+    top: -6px;
+    left: 50%;
+    box-shadow: 5px 5px 5px 0px black;
+    transform: translate(-50%, -100%);
+    background: #555;
     text-align: center;
     color: #fff;
-    padding:4px 2px;
-    font-size: 12px;
-    min-width: 80px;
-    border-radius: 5px;
+    padding: 5px 0px 5px 0px;
+    font-size: 16px;
+    width: 250px;
+    border-radius: 4px;
     pointer-events: none;
+    z-index: 1;
+    opacity: 0;
 }
+span[tooltip]:after {
+	top: -20px;
+	transition-delay: 0.5s;
+}
+span[tooltip]:before {
+	top: -20px;
+	transition-delay: 0.5s;
+	width: 150px;
+}
+/*on hover change opacity on tooltip elements*/
+[tooltip]:hover::after, [tooltip]:hover::before {
+   opacity: 1;
+}
+/**** this part of the tooltip code alows for setting the position ****/
+/*
+[tooltip-position='left']::before{
+  left:0%;
+  top:50%;
+  margin-left:-12px;
+  transform:translatey(-50%) rotate(-90deg) 
+}
+[tooltip-position='top']::before{
+  left:50%;
+}
+[tooltip-position='bottom']::before{
+  top:100%;
+  margin-top:8px;
+  transform: translateX(-50%) translatey(-100%) rotate(-180deg)
+}
+[tooltip-position='right']::before{
+  left:100%;
+  top:50%;
+  margin-left:1px;
+  transform:translatey(-50%) rotate(90deg)
+}
+*/
+
+/*
+[tooltip-position='left']::after{
+  left:0%;
+  top:50%;
+  margin-left:-8px;
+  transform: translateX(-100%)   translateY(-50%);
+}
+[tooltip-position='top']::after{
+  left:50%;
+}
+[tooltip-position='bottom']::after{
+  top:100%;
+  margin-top:8px;
+  transform: translateX(-50%) translateY(0%);
+}
+[tooltip-position='right']::after{
+  left:100%;
+  top:50%;
+  margin-left:8px;
+  transform: translateX(0%)   translateY(-50%);
+}
+*/

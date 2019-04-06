@@ -34,17 +34,20 @@
 	
 	<div id="ultimateContainer">
 		<div id="topMenu">
-			<div class="menuLinks round shadow" title="Select burger recipies.">Burgers</div>
-			<div class="menuLinks round shadow" title="Build a custom burger!">Build</div>
-			<div class="menuLinks round shadow" title="Learn more about us.">About Us</div>
+			<span class="menuLinks round shadow" tooltip="Select burger recipies.">Burgers</span>
+			<span class="menuLinks round shadow" tooltip="Build a custom burger!">Build</span>
+			<span class="menuLinks round shadow" tooltip="Learn more about us.">About Us</span>
 		</div><br>
 
-		<a onClick="showGrill()"><div id="hotSpecial" class="round">
-			<div id="specialTitle">
-				&#10067 &nbsp;&nbsp; W H A T ' S &nbsp;&nbsp; O N &nbsp;&nbsp; T H E &nbsp;&nbsp; G R I L L &nbsp;&nbsp; &#10067
-				<span id="grillContent"></span>
+		<a onClick="showGrill()">
+			<div id="hotSpecial" class="round">
+				<div id="specialTitle">
+					<div id="theGrill" class="grillGrate"><hr><br><hr></div><br>
+					&#10067 &nbsp;&nbsp; W H A T ' S &nbsp;&nbsp; O N &nbsp;&nbsp; T H E &nbsp;&nbsp; G R I L L &nbsp;&nbsp; &#10067
+					<span id="grillContent"></span>
+				</div>
 			</div>
-		</div></a><br>
+		</a><br>
 
 		<div id="funFactContent" class="mainBody3 round shadow">
 			<form name="my_form" class="round">
@@ -63,39 +66,35 @@
 					Toppings
 				</div>
 
-				<div>
+				<div class="condimentsGroup">
 					<br>
-					<div class="options" tooltip="1 Slice &#9679 105 cal &#9679 $0.50">Havarti</div>
-					
-					<div class="options" tooltip="1 Slice &#9679 15 cal &#9679 $0.20">Purple Onion</div>
-					
+					<div class="condimentsOptions" tooltip="1 Slice &#9679 105 cal &#9679 $0.50">Havarti</div><br>
+					<div class="condimentsOptions" tooltip="1 Slice &#9679 15 cal &#9679 $0.20">Purple Onions</div><br>
 					<br>
-					<div class="options" tooltip="3 Strips &#9679 129 cal &#9679 $1.50">Bacon Strips</div>
-					
+					<div class="condimentsOptions" tooltip="3 Strips &#9679 129 cal &#9679 $1.50">Bacon Strips</div><br>
 				</div>
 			</div>
 
-			<div class="mainBody5"></div>
+			<div id="condimentsSpace"></div>
 
 			<div class="condimentsTitle round shadow">
 				<div>
 					Sauces
 				</div>
-
-				<div class="tooltip">
+				<div class="condimentsGroup">
 					<br>
-					<div class="options">Ketchup</div>
-					<div class="tooltiptext">1 Tbsp &#9679 19 cal &#9679 $0.20</div>
-					<div class="options">Sticky Fingers BBQ®</div>
-					<div class="tooltiptext">2 Tbsp &#9679 40 cal &#9679 $0.35</div>
-					<br>
-					<div class="options">Frank's Red Hot Sauce®</div>
-					<div class="tooltiptext">1 Tsp &#9679 0 cal &#9679 $0.15</div>
+					<div class="condimentsOptions" tooltip="1 Tbsp &#9679 19 cal &#9679 $0.20">
+						Ketchup
+					</div>
+					<div class="condimentsOptions" tooltip="2 Tbsp &#9679 40 cal &#9679 $0.35">
+						Sticky Fingers BBQ®
+					</div><br><br>
+					<div class="condimentsOptions" tooltip="1 Tsp &#9679 0 cal &#9679 $0.15">
+						Frank's Red Hot Sauce®
+					</div><br>
 				</div>
 			</div>
-
 		</div>
-
 	</div>
 </div><!--end mainContaier-->
 <div id="base">

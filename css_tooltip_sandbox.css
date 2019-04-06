@@ -4,56 +4,141 @@ body {
 div {
   border: solid black;
   border-radius: 4px;
-  background-color: #999;
   padding: 5px;
 }
+div:hover{
+    box-shadow: 0 3px 8px 0 black;
+}
+#ultimateContainer {
+  display: flex;
+  width: 600px;
+}
+
+b {
+  color: white;
+  font-weight: bolder;
+  font-size: 18pt;
+  text-align: center;
+}
+hr {
+  height: 2px;
+  background-color: black;
+  border: solid black;
+}
+
+#grill {
+  background: repeating-linear-gradient(
+            to right,
+            #ff6666,
+            coral 10px,
+            #666 2px,
+            black 20px
+  );
+}
+.stripes {
+  color: black;
+  animation: grillAnimation 2s infinite;
+  transition-timing-function: ease-in-out;
+}
+
+
+@keyframes grillAnimation {
+  /* this at-rule is named 'mymove' and describes one cycle of the animation*/
+    33% {background: repeating-linear-gradient(
+            to right,
+            #ff6666,
+            coral 10px,
+            #666 2px,
+            black 20px
+  );
+  }
+    34% {background: repeating-linear-gradient(
+            to right,
+            #ff4444,
+            #ff6666 10px,
+            #666 2px,
+            black 20px
+  );
+  }
+    33% {background: repeating-linear-gradient(
+            to right,
+            #ff4444,
+            orange 10px,
+            #666 2px,
+            black 20px
+  );
+  }
+}
+
+
+
 .condimentsContainer{
-  display: inline-block;
- margin:auto;
- margin-top:40px;
- width:600px;
- background-color: #DDD;
+  display: block;
+ width:40%;
+ background-image: url('C:/Users/RWolff/Desktop/Project4Fun/assets/horizontal_wood.png');
+    
 }
 .condimentsTitle {
-    display: inline-block;
+    display: block;
     position: relative;
     width: 46%;
-    background-image: url('C:/Users/RWolff/Desktop/Project4Fun/assets/horizontal_wood.png');
-    padding: 25px 0px 20px 0px;
+    padding: 5px 0px 0px 0px;
     border: none;
     font-size: 18pt;
     font-variant: small-caps;
     font-weight: bold;
     text-decoration: underline;
   }
-div{
-    border: 1px solid black;
-    border-radius: 4px;
-    padding: 8px 12px;
-    color: black;
-}
-div:hover{
-    box-shadow: 0 3px 8px 0 rgba(0,0,0,.2), 0 0 0 1px rgba(0,0,0,.08);
-}
+  .options {
+    width: 200px;
+    text-align: center;
+    padding: 0px 0px 0px 0px;
+  }
 
+.mainBody5 {
+    display: inline-block;
+    width: 8%;
+    background-color: white;
+  }
+
+/********************************************/
 [tooltip]{
-  margin:20px 60px;
   position:relative;
   display:inline-block;
+  border: solid blue;
 }
+/*the BEFORE makes the triangle*/
 [tooltip]::before {
     content: "";
     position: absolute;
-    top:-6px;
+    top: -10px;
     left:50%;
-    transform: translateX(-50%);
-    border-width: 4px 6px 0 6px;
+    transform: translate(-50%, 0%);/*center the triange about it's center i.e. 50% ?*/
+    border-width: 10px 6px 0px 6px;
     border-style: solid;
-    border-color: rgba(0,0,0,0.7) transparent transparent     transparent;
-    z-index: 99;
-    opacity:0;
+    border-color: #555 transparent transparent transparent;
+    z-index: 1;
+    opacity:1;
 }
-
+/*the AFTER part makes the main tooltip body*/
+[tooltip]::after {
+    content: attr(tooltip);/*fetch the text from the attribute*/
+    position: absolute;
+    left:50%;
+    top:-10px;
+    transform: translate(-50%, -100%);
+    background: #555;
+    text-align: center;
+    color: #fff;
+    padding:4px 0px 4px 0px;
+    font-size: 12px;
+    width: 150px;
+    border-radius: 5px;
+    pointer-events: none;
+    z-index: 1;
+    opacity: 1;
+}
+/*
 [tooltip-position='left']::before{
   left:0%;
   top:50%;
@@ -74,26 +159,9 @@ div:hover{
   margin-left:1px;
   transform:translatey(-50%) rotate(90deg)
 }
+*/
 
-[tooltip]::after {
-    content: attr(tooltip);
-    position: absolute;
-    left:50%;
-    top:-6px;
-    transform: translateX(-50%)   translateY(-100%);
-    background: rgba(0,0,0,0.7);
-    text-align: center;
-    color: #fff;
-    padding:4px 2px;
-    font-size: 12px;
-    min-width: 80px;
-    border-radius: 5px;
-    pointer-events: none;
-    padding: 4px 4px;
-    z-index:99;
-    opacity:0;
-}
-
+/*
 [tooltip-position='left']::after{
   left:0%;
   top:50%;
@@ -114,11 +182,8 @@ div:hover{
   margin-left:8px;
   transform: translateX(0%)   translateY(-50%);
 }
-
+*/
+/*on hover change opacity on tooltip elements*/
 [tooltip]:hover::after,[tooltip]:hover::before {
-   opacity:1
-}
-
-.input{
-  margin-left:135px
+   opacity: 1;
 }
