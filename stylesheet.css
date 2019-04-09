@@ -32,6 +32,7 @@ body {
 .menuLinks {
 	display: inline-block;
 	position: relative;
+	cursor: pointer;
 	width: 32%;
 	background-color: red;
 	padding: 0px 0px 0px 0px;
@@ -68,11 +69,13 @@ body {
 #hotSpecial {
 	display: block;
 	background-color: black;
-	padding: 6px 0px 20px 0px;
+	padding: 6px 0px 6px 0px;
 	box-shadow: 5px 10px 10px 0px red;
 	color: white;
 	border-top-left-radius: 15px;
 	border-top-right-radius: 15px;
+	border-bottom-left-radius: 15px;
+	border-bottom-right-radius: 15px;
 	animation: myShadow 4s infinite;
 }
 #hotSpecial:hover {
@@ -97,10 +100,14 @@ hr {
 	padding: 0px 0px 0px 0px;
 	font-size: 8pt;
 }
+#grillHR {
+	width: 75%;
+	border-top: solid white 1px;
+}
 
 #theGrill {
 	width: 96%;
-	height: 50px;
+	height: auto;
 	margin: auto;
 	border: solid #555 5px;
 	border-radius: 10px;
@@ -144,9 +151,15 @@ hr {
   );
   }
 }
-#specialTitle {
+#grillTitle {
 	display: block;
-	text-align: center;
+	position: relative;
+	width: 400px;
+	margin: auto;
+	align-self: center;
+	color: white;
+	background-color: black;
+	padding: 10px 5px 10px 5px;
 }
 
 .mainBody3 {         
@@ -201,6 +214,7 @@ hr {
 	display: block;
 	font-size: 14pt;
 	font-weight: normal;
+	cursor: pointer;
 	padding: 2px 0px 2px 0px;
 }
 .condimentsOptions:hover {
@@ -335,24 +349,25 @@ THIS CODE BELOW CREATES A CUSTOM HOVERABLE TOOLTIP
 [tooltip]::after {
     content: "";
     position: absolute;
-    top: -6px;
+    top: -7px;
     left: 50%;
     transform: translate(-50%, 0%);/*center the triange about it's center i.e. 50% ?*/
     border-width: 15px 10px 0px 10px;
     border-style: solid;
     border-color: #555 transparent transparent transparent;
+    cursor: pointer;
     z-index: 1;
-    opacity: 0;
+    opacity: 1;
 }
 
 /*the AFTER part makes the main tooltip body*/
 [tooltip]::before {
     content: attr(tooltip);/*fetch the text from the attribute*/
     position: absolute;
-    top: -6px;
+    top: -7px;
     left: 50%;
     box-shadow: 5px 5px 5px 0px black;
-    transform: translate(-50%, -100%);
+    transform: translate(-50%, -99%);
     background: #555;
     text-align: center;
     color: #fff;
@@ -360,38 +375,67 @@ THIS CODE BELOW CREATES A CUSTOM HOVERABLE TOOLTIP
     font-size: 16px;
     width: 250px;
     border-radius: 4px;
-    pointer-events: none;
+    cursor: pointer;
     z-index: 1;
-    opacity: 0;
+    opacity: 1;
 }
-span[tooltip]:after {
+span[tooltip]::after {
 	top: -20px;
 	transition-delay: 0.5s;
 }
-span[tooltip]:before {
+span[tooltip]::before {
 	top: -20px;
 	transition-delay: 0.5s;
 	width: 150px;
 }
+
 /*on hover change opacity on tooltip elements*/
 [tooltip]:hover::after, [tooltip]:hover::before {
    opacity: 1;
 }
 /**** this part of the tooltip code alows for setting the position ****/
+
+/* these are the default and not needed*/
+[tooltip-position='top']::after{
+}
+[tooltip-position='top']::before{
+}
+
+[tooltip-position='bottom']::after{
+    bottom: -15px;
+    left: 50%;
+    transform: translate(-50%, 0%)  rotate(180deg);
+}
+[tooltip-position='bottom']::before{
+	top: 0px;
+    bottom: -15px;
+    left: 50%;
+    padding-bottom: 0px;
+    transform: translate(-50%, 99%);
+}
+span[tooltip-position='bottom']::before {
+	top: 0px;
+}
+
 /*
-[tooltip-position='left']::before{
+[tooltip-position='left']::after{
   left:0%;
   top:50%;
   margin-left:-12px;
-  transform:translatey(-50%) rotate(-90deg) 
+  transform:translatey(-50%) rotate(0deg) 
 }
-[tooltip-position='top']::before{
-  left:50%;
+[tooltip-position='left']::before{
+  left:0%;
+  top:50%;
+  margin-left:-8px;
+  transform: translateX(-100%)   translateY(-50%);
 }
-[tooltip-position='bottom']::before{
-  top:100%;
-  margin-top:8px;
-  transform: translateX(-50%) translatey(-100%) rotate(-180deg)
+
+[tooltip-position='right']::after{
+  left:100%;
+  top:50%;
+  margin-left:8px;
+  transform: translateX(0%)   translateY(-50%);
 }
 [tooltip-position='right']::before{
   left:100%;
@@ -401,25 +445,9 @@ span[tooltip]:before {
 }
 */
 
-/*
-[tooltip-position='left']::after{
-  left:0%;
-  top:50%;
-  margin-left:-8px;
-  transform: translateX(-100%)   translateY(-50%);
-}
-[tooltip-position='top']::after{
-  left:50%;
-}
-[tooltip-position='bottom']::after{
-  top:100%;
-  margin-top:8px;
-  transform: translateX(-50%) translateY(0%);
-}
-[tooltip-position='right']::after{
-  left:100%;
-  top:50%;
-  margin-left:8px;
-  transform: translateX(0%)   translateY(-50%);
-}
-*/
+
+
+
+
+
+

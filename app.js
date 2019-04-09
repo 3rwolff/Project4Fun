@@ -10,7 +10,7 @@ if ( document.getElementById( "grillContent").innerHTML=="")
 	grill[1] = "1/2 Pounder! - $3.99";
 	grill[2] = "Bacon Wrapped Burger! - $3.50";
 
-	var onTheGrill = "<hr width=50%>";
+	var onTheGrill = "<hr id=\"grillHR\">";
 	for (i = 0; i < grill.length; i++)
 		{
 		if (i != 0)
