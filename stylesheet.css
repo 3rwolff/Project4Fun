@@ -269,6 +269,7 @@ hr {
 	height: 35px;
 	width: 120px;
 	margin: auto;
+	cursor: pointer;
 	border: none;
 }
 
