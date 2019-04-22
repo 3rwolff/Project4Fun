@@ -173,7 +173,7 @@ hr {
 	font-variant: small-caps;
 	padding: 10px 0px 10px 0px;
 	background-image:
-	url('C:/Users/RWolff/Desktop/Project4Fun/assets/vertical_wood.png');
+	url('assets/vertical_wood.png');
 }
 #funFact {
 	display: block;
@@ -199,7 +199,7 @@ hr {
 	display: block;
 	position: relative;
 	width: 46%;
-	background-image: url('C:/Users/RWolff/Desktop/Project4Fun/assets/horizontal_wood.png');
+	background-image: url('assets/horizontal_wood.png');
 	padding: 25px 0px 20px 0px;
 	border: none;
 	font-size: 18pt;
@@ -235,13 +235,7 @@ hr {
 	padding-left: 0px;
 }
 
-#base {
-	display: flex;
-}
-.baseContent {
-	margin: auto;
-	padding: 0px 20px 0px 20px;	
-}
+
 #scrollBtn {
 	 display: none;
 	 position: fixed;
@@ -260,7 +254,59 @@ hr {
 		 background-color: #555;
 }
 
-/*HELPER CSS CLASSES*/
+#base {
+	display: block;
+}
+#giphyBurger {
+	display: block;
+	margin: auto;
+	padding: 0px 20px 0px 20px;	
+	margin: auto;
+}
+
+#theme {
+	display: flex;
+	height: 35px;
+	width: 120px;
+	margin: auto;
+	border: none;
+}
+
+#light {
+	display: inline-block;
+	vertical-align: middle;
+	background-color: white;
+	border: solid black;
+	border-top-left-radius: 15px;
+	border-bottom-left-radius: 15px;
+}
+
+#light:hover {
+	box-shadow: 0px 0px 5px 2px grey;
+}
+
+#dark {
+	display: inline-block;	
+	vertical-align: middle;
+	background-color: #666;
+	border: solid white;
+	border-top-right-radius: 15px;
+	border-bottom-right-radius: 15px;
+}
+
+#dark:hover {
+	box-shadow: 0px 0px 5px 2px white;
+}
+
+.themeImage {
+	display: block;
+	width: 50%;
+	height: auto;
+}
+
+/************************/
+/** HELPER CSS CLASSES **/
+/************************/
 .round {
 	border-radius: 4px;
 }
@@ -355,9 +401,8 @@ THIS CODE BELOW CREATES A CUSTOM HOVERABLE TOOLTIP
     border-width: 15px 10px 0px 10px;
     border-style: solid;
     border-color: #555 transparent transparent transparent;
-    cursor: pointer;
     z-index: 1;
-    opacity: 1;
+    opacity: 0;
 }
 
 /*the AFTER part makes the main tooltip body*/
@@ -375,9 +420,8 @@ THIS CODE BELOW CREATES A CUSTOM HOVERABLE TOOLTIP
     font-size: 16px;
     width: 250px;
     border-radius: 4px;
-    cursor: pointer;
     z-index: 1;
-    opacity: 1;
+    opacity: 0;
 }
 span[tooltip]::after {
 	top: -20px;
@@ -401,19 +445,19 @@ span[tooltip]::before {
 [tooltip-position='top']::before{
 }
 
-[tooltip-position='bottom']::after{
+[tooltip-position='bottom2']::after{
     bottom: -15px;
     left: 50%;
     transform: translate(-50%, 0%)  rotate(180deg);
 }
-[tooltip-position='bottom']::before{
+[tooltip-position='bottom2']::before{
 	top: 0px;
     bottom: -15px;
     left: 50%;
     padding-bottom: 0px;
     transform: translate(-50%, 99%);
 }
-span[tooltip-position='bottom']::before {
+span[tooltip-position='bottom2']::before {
 	top: 0px;
 }
 
