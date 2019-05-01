@@ -172,8 +172,7 @@ hr {
 	font-size: 18pt;   
 	font-variant: small-caps;
 	padding: 10px 0px 10px 0px;
-	background-image:
-	url('assets/vertical_wood.PNG');
+	background-image: url('assets/vertical_wood.PNG');
 }
 #funFact {
 	display: block;
