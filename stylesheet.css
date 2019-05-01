@@ -173,7 +173,7 @@ hr {
 	font-variant: small-caps;
 	padding: 10px 0px 10px 0px;
 	background-image:
-	url('assets/vertical_wood.png');
+	url('assets/vertical_wood.PNG');
 }
 #funFact {
 	display: block;
@@ -199,7 +199,7 @@ hr {
 	display: block;
 	position: relative;
 	width: 46%;
-	background-image: url('assets/horizontal_wood.png');
+	background-image: url('assets/horizontal_wood.PNG');
 	padding: 25px 0px 20px 0px;
 	border: none;
 	font-size: 18pt;
